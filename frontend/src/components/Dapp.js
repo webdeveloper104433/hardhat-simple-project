@@ -177,13 +177,13 @@ export class Dapp extends React.Component {
     // It returns a promise that will resolve to the user's address.
     
     const [selectedAddress] = await window.ethereum.enable();
-
+    console.log(this._checkNetwork())
     // Once we have the address, we can initialize the application.
 
     // First we check the network
-    if (!this._checkNetwork()) {
-      return;
-    }
+    // if (!this._checkNetwork()) {
+    //   return;
+    // }
 
     this._initialize(selectedAddress);
 
